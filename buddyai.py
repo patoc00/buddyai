@@ -11,7 +11,7 @@ import time
 from streamlit_chat import message
 
 # Set the GPT-3 API key
-openai.api_key = st.secrets["pass"]
+openai.api_key = "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"
 
 # emojis: https://www.webfx.com/tools/emoji-cheat-sheet/
 st.set_page_config(page_title="Buddy.AI",
