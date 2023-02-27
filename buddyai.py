@@ -161,7 +161,7 @@ elif category == 'Entertainment & Food Buddy':
                 with st.spinner('Sit tight! While your buddy gets the job done for you...'):
                     response = openai.Completion.create(
                         engine = "text-davinci-003",
-                        prompt = "Please provide the lyrics in english for the following song: " + str(lyr_text) +  " by" + sing_text,
+                        prompt = "Please provide the lyrics in english for the following song: " + str(lyr_text) +  " by" + sing_text, # why are you making lyr_text a string if it already is a string.
                         max_tokens = 516,
                         temperature = 0.5)
                     
@@ -185,7 +185,7 @@ elif category == 'Entertainment & Food Buddy':
         
         if options == "Another Movie":
 
-            movie_text = st.text_area(label="Enter name of a movie, to get suggestions for similar movies: ")
+            movie_text = st.text_area(label="Enter the name of a movie, to get suggestions for similar movies: ")
             movie_num = st.number_input(label="How many movie suggestions would you like?", min_value= 1)
             #movie_genre = st.selectbox(label = 'What genre do you preder?',
                                 #options=['Comedy', 'Horror', 'Action', 'Bollywood', 'Top Rated', 'Rom-Com',
