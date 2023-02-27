@@ -14,6 +14,7 @@ from dotenv import load_dotenv
 dotenv_path = join(dirname(__file__), '.env')
 load_dotenv(dotenv_path)
 
+# nice way of obtaining the API key in a secret hidden way.
 password = os.environ.get('API_KEY')
 #password = config('password',default='')
 
@@ -21,7 +22,7 @@ password = os.environ.get('API_KEY')
 #to run, streamlit run buddyai.py 
 
 
-
+# set the api key you just previously got.
 # Set the GPT-3 API key
 openai.api_key = password
 
